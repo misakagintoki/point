@@ -8,13 +8,15 @@
 
 import UIKit
 
+var selectedItemArray:[ItemInfo] = []
+
 class ItemInfoViewController: UIViewController {
     
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var itemInfoTableView: UITableView!
     
     var itemName = ""
-    var selectedItemArray:[ItemInfo] = []
+//    var selectedItemArray:[ItemInfo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +34,8 @@ extension ItemInfoViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PointCell", for: indexPath) as! ItemPointTableViewCell
-        cell.itemNameLabel.text = selectedItemArray[indexPath.row].itemName
-        cell.itemImage.image = UIImage(named: selectedItemArray[indexPath.row].imageName ?? "")
-        
+        cell.row = indexPath.row
+        cell.setupStar()
         return cell
     }
     

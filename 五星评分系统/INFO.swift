@@ -11,9 +11,11 @@ import Foundation
 struct ItemInfo {
     var itemName :String?
     var imageName:String?
+    var point:Int?
     
-    init(itemName:String , imageName:String) {
+    init(itemName:String , imageName:String, point:Int) {
         self.itemName = itemName
         self.imageName = imageName
+        self.point = point
     }
 }

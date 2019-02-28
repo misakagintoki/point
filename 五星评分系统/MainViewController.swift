@@ -8,29 +8,29 @@
 
 import UIKit
 
-var itemArray:[ItemInfo]  = [ItemInfo(itemName: "电影", imageName: filmArray[0].imageName ?? ""),
-                             ItemInfo(itemName: "音乐", imageName: musicArray[0].imageName ?? "")]
+var itemArray:[ItemInfo]  = [ItemInfo(itemName: "电影", imageName: filmArray[0].imageName ?? "", point: 0 ),
+                             ItemInfo(itemName: "音乐", imageName: musicArray[0].imageName ?? "", point: 0)]
 
-var filmArray:[ItemInfo]  = [ItemInfo(itemName: "Aimer-Dawn"      , imageName: "Aimer-Dawn"),
-                             ItemInfo(itemName: "Aimer-AfterDark" , imageName: "Aimer-AfterDark"),
-                             ItemInfo(itemName: "Aimer-blanr"     , imageName: "Aimer-blanr"),
-                             ItemInfo(itemName: "Aimer-蝶々"       , imageName: "Aimer-蝶々"),
-                             ItemInfo(itemName: "Aimer-Dawn"      , imageName: "Aimer-Dawn"),
-                             ItemInfo(itemName: "Aimer-AfterDark" , imageName: "Aimer-AfterDark"),
-                             ItemInfo(itemName: "Aimer-blanr"     , imageName: "Aimer-blanr"),
-                             ItemInfo(itemName: "Aimer-蝶々"       , imageName: "Aimer-蝶々"),
-                             ItemInfo(itemName: "Aimer-Dawn"      , imageName: "Aimer-Dawn"),
-                             ItemInfo(itemName: "Aimer-AfterDark" , imageName: "Aimer-AfterDark"),
-                             ItemInfo(itemName: "Aimer-blanr"     , imageName: "Aimer-blanr"),
-                             ItemInfo(itemName: "Aimer-蝶々"       , imageName: "Aimer-蝶々"),
-                             ItemInfo(itemName: "Aimer-Dawn"      , imageName: "Aimer-Dawn"),
-                             ItemInfo(itemName: "Aimer-AfterDark" , imageName: "Aimer-AfterDark"),
-                             ItemInfo(itemName: "Aimer-blanr"     , imageName: "Aimer-blanr"),
-                             ItemInfo(itemName: "Aimer-蝶々"       , imageName: "Aimer-蝶々")]
-var musicArray:[ItemInfo] = [ItemInfo(itemName: "Aimer-AfterDark", imageName: "Aimer-AfterDark"),
-                             ItemInfo(itemName: "Aimer-blanr"    , imageName: "Aimer-blanr"),
-                             ItemInfo(itemName: "Aimer-蝶々"      , imageName: "Aimer-蝶々"),
-                             ItemInfo(itemName: "Aimer-Dawn"      , imageName: "Aimer-Dawn")]
+var filmArray:[ItemInfo]  = [ItemInfo(itemName: "Aimer-Dawn"      , imageName: "Aimer-Dawn" , point: 0),
+                             ItemInfo(itemName: "Aimer-AfterDark" , imageName: "Aimer-AfterDark", point: 0),
+                             ItemInfo(itemName: "Aimer-blanr"     , imageName: "Aimer-blanr" , point: 0),
+                             ItemInfo(itemName: "Aimer-蝶々"       , imageName: "Aimer-蝶々" , point: 0),
+                             ItemInfo(itemName: "Aimer-Dawn"      , imageName: "Aimer-Dawn", point: 0),
+                             ItemInfo(itemName: "Aimer-AfterDark" , imageName: "Aimer-AfterDark", point: 0),
+                             ItemInfo(itemName: "Aimer-blanr"     , imageName: "Aimer-blanr", point: 0),
+                             ItemInfo(itemName: "Aimer-蝶々"       , imageName: "Aimer-蝶々", point: 0),
+                             ItemInfo(itemName: "Aimer-Dawn"      , imageName: "Aimer-Dawn", point: 0),
+                             ItemInfo(itemName: "Aimer-AfterDark" , imageName: "Aimer-AfterDark", point: 0),
+                             ItemInfo(itemName: "Aimer-blanr"     , imageName: "Aimer-blanr", point: 0),
+                             ItemInfo(itemName: "Aimer-蝶々"       , imageName: "Aimer-蝶々", point: 0),
+                             ItemInfo(itemName: "Aimer-Dawn"      , imageName: "Aimer-Dawn", point: 0),
+                             ItemInfo(itemName: "Aimer-AfterDark" , imageName: "Aimer-AfterDark", point: 0),
+                             ItemInfo(itemName: "Aimer-blanr"     , imageName: "Aimer-blanr", point: 0),
+                             ItemInfo(itemName: "Aimer-蝶々"       , imageName: "Aimer-蝶々", point: 0)]
+var musicArray:[ItemInfo] = [ItemInfo(itemName: "Aimer-AfterDark", imageName: "Aimer-AfterDark", point: 0),
+                             ItemInfo(itemName: "Aimer-blanr"    , imageName: "Aimer-blanr", point: 0),
+                             ItemInfo(itemName: "Aimer-蝶々"      , imageName: "Aimer-蝶々", point: 0),
+                             ItemInfo(itemName: "Aimer-Dawn"      , imageName: "Aimer-Dawn", point: 0 )]
 
 class MainViewController: UIViewController {
     
@@ -81,9 +81,9 @@ extension MainViewController:UICollectionViewDelegateFlowLayout,UICollectionView
             nextPageVC.itemName = itemArray[sender as! Int].itemName ?? ""
             switch itemArray[sender as! Int].imageName{
             case filmArray[0].imageName:
-                nextPageVC.selectedItemArray = filmArray
+                selectedItemArray = filmArray
             case musicArray[0].imageName:
-                nextPageVC.selectedItemArray = musicArray
+                selectedItemArray = musicArray
             default:
                 break
             }

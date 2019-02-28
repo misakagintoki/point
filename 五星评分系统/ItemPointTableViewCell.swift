@@ -13,22 +13,18 @@ class ItemPointTableViewCell: UITableViewCell {
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
     
-    
-    let starName = ["firstStar","secondStar","thirdStar","forthStar","fifthStar"]
-    
     @IBOutlet weak var firstStar: UIButton!
     @IBOutlet weak var secondStar: UIButton!
     @IBOutlet weak var thirdStar: UIButton!
     @IBOutlet weak var forthStar: UIButton!
     @IBOutlet weak var fifthStar: UIButton!
     
-    
+    var row:Int = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         setupStar()
-        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -43,10 +39,8 @@ class ItemPointTableViewCell: UITableViewCell {
         }
     }
     
-    //给按键添加方法， 根据sender.tag判断应该怎么改变星星的图片
-    @IBAction func starButton(_ sender: UIButton) {
-        setupStar()
-        switch sender.tag {
+    func changeStar2(tag:Int){
+        switch tag {
         case 1:
             changeStar(images: [firstStar])
         case 2:
@@ -60,6 +54,12 @@ class ItemPointTableViewCell: UITableViewCell {
         default:
             break
         }
+        selectedItemArray[row].point = tag
+    }
+    //给按键添加方法， 根据sender.tag判断应该怎么改变星星的图片
+    @IBAction func starButton(_ sender: UIButton) {
+        setupStar()
+        changeStar2(tag: sender.tag)
     }
     
     
@@ -70,6 +70,10 @@ class ItemPointTableViewCell: UITableViewCell {
         thirdStar.setBackgroundImage(#imageLiteral(resourceName: "star_Default.png"), for: .normal)
         forthStar.setBackgroundImage(#imageLiteral(resourceName: "star_Default.png"), for: .normal)
         fifthStar.setBackgroundImage(#imageLiteral(resourceName: "star_Default.png"), for: .normal)
+        
+        itemNameLabel.text = selectedItemArray[row].itemName
+        itemImage.image = UIImage(named: selectedItemArray[row].imageName ?? "")
+        changeStar2(tag: selectedItemArray[row].point ?? 0)
     }
 }
 
