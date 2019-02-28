@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		CEFC10F122265D90008DCAE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC10F022265D90008DCAE6 /* AppDelegate.swift */; };
-		CEFC10F322265D90008DCAE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC10F222265D90008DCAE6 /* ViewController.swift */; };
 		CEFC10F622265D90008DCAE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFC10F422265D90008DCAE6 /* Main.storyboard */; };
 		CEFC10F822265D90008DCAE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFC10F722265D90008DCAE6 /* Assets.xcassets */; };
 		CEFC10FB22265D90008DCAE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFC10F922265D90008DCAE6 /* LaunchScreen.storyboard */; };
+		CEFC110322265DAB008DCAE6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC110222265DAB008DCAE6 /* MainViewController.swift */; };
+		CEFC110522265FE2008DCAE6 /* FileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC110422265FE2008DCAE6 /* FileCollectionViewCell.swift */; };
+		CEFC1107222662A9008DCAE6 /* ItemInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC1106222662A9008DCAE6 /* ItemInfoViewController.swift */; };
+		CEFC11092226635E008DCAE6 /* ItemPointTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC11082226635E008DCAE6 /* ItemPointTableViewCell.swift */; };
+		CEFC110B22266905008DCAE6 /* INFO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC110A22266905008DCAE6 /* INFO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CEFC10ED22265D90008DCAE6 /* 五星评分系统.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "五星评分系统.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFC10F022265D90008DCAE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CEFC10F222265D90008DCAE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CEFC10F522265D90008DCAE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEFC10F722265D90008DCAE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEFC10FA22265D90008DCAE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEFC10FC22265D90008DCAE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEFC110222265DAB008DCAE6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CEFC110422265FE2008DCAE6 /* FileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEFC1106222662A9008DCAE6 /* ItemInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoViewController.swift; sourceTree = "<group>"; };
+		CEFC11082226635E008DCAE6 /* ItemPointTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPointTableViewCell.swift; sourceTree = "<group>"; };
+		CEFC110A22266905008DCAE6 /* INFO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INFO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				CEFC10F022265D90008DCAE6 /* AppDelegate.swift */,
-				CEFC10F222265D90008DCAE6 /* ViewController.swift */,
 				CEFC10F422265D90008DCAE6 /* Main.storyboard */,
 				CEFC10F722265D90008DCAE6 /* Assets.xcassets */,
 				CEFC10F922265D90008DCAE6 /* LaunchScreen.storyboard */,
 				CEFC10FC22265D90008DCAE6 /* Info.plist */,
+				CEFC110222265DAB008DCAE6 /* MainViewController.swift */,
+				CEFC110422265FE2008DCAE6 /* FileCollectionViewCell.swift */,
+				CEFC1106222662A9008DCAE6 /* ItemInfoViewController.swift */,
+				CEFC11082226635E008DCAE6 /* ItemPointTableViewCell.swift */,
+				CEFC110A22266905008DCAE6 /* INFO.swift */,
 			);
 			path = "五星评分系统";
 			sourceTree = "<group>";
@@ -135,8 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEFC10F322265D90008DCAE6 /* ViewController.swift in Sources */,
 				CEFC10F122265D90008DCAE6 /* AppDelegate.swift in Sources */,
+				CEFC110B22266905008DCAE6 /* INFO.swift in Sources */,
+				CEFC1107222662A9008DCAE6 /* ItemInfoViewController.swift in Sources */,
+				CEFC110522265FE2008DCAE6 /* FileCollectionViewCell.swift in Sources */,
+				CEFC110322265DAB008DCAE6 /* MainViewController.swift in Sources */,
+				CEFC11092226635E008DCAE6 /* ItemPointTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
